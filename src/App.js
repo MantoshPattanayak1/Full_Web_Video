@@ -17,7 +17,9 @@ import AddCamera from "./AddCamera";
 import WrongParking from "./Components/WrongParking";
 import CrowdAlert from "./Components/CrowdAlert";
 import AddZone from "./AddZone";
-
+import AirAlerts from "./pages/AirAlerts";
+import './App.css'
+import LiveVideo from "./pages/LiveVideo";
 function App() {
   return (
     <Provider store={Store}>
@@ -86,8 +88,17 @@ const routes = [
         element: <WrongParking />,
       },
       {
+        path: "/AirAlerts",
+        element:<AirAlerts />,
+      },
+
+      {
         path: "/CrowdAlert",
         element: <CrowdAlert />,
+      },
+      {
+        path: "/LiveVideo",
+        element: <LiveVideo />,
       },
     ],
   },

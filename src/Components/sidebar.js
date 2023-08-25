@@ -54,10 +54,12 @@ const Sidebar = () => {
                     <span className="ml-2  ">Dashboard</span>
                 </li>
                 </Link>
+                <Link to="/LiveVideo">
                 <li className="flex items-center py-2 px-3 font-semibold hover:bg-gray-200">
                     <LiveTvIcon className="w-5 h-5 mr-2 "/>
                     <span className="ml-2 ">Live</span>
                 </li>
+                </Link>
                 <Link to="/Searchdashboard">
                    <li className="flex items-center py-2 px-3 font-semibold hover:bg-gray-200">
                       <LiveTvIcon className="w-5 h-5 mr-2 "/>
@@ -74,7 +76,7 @@ const Sidebar = () => {
                        <Link to="/CrowdAlert"><li className="hover:text-blue-600 py-1 px-4 "><GroupsIcon/>Crowd Alert</li></Link>
                         <li className="hover:text-blue-600 py-1 px-4  "><LocalFireDepartmentIcon/>Fire </li>
                       <Link to="/WrongParking"> <li className="hover:text-blue-600 py-1 px-4 "><DangerousIcon/>Wrong Parking</li></Link>
-                        <li className="hover:text-blue-600 py-1 px-4  "><AcUnitIcon/>Air quality</li>
+                    <Link to="/AirAlerts">   <li className="hover:text-blue-600 py-1 px-4  "><AcUnitIcon/>Air quality</li></Link> 
                         <li className="hover:text-blue-600 py-1 px-4 "><InvertColorsIcon/>Water quality</li>
                     </>
                 )}
