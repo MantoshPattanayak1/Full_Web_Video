@@ -2,7 +2,7 @@
 import React from "react";
 import { BarChart, Bar,  XAxis, YAxis, CartesianGrid, Tooltip, Legend, ResponsiveContainer } from 'recharts';
 import Cameralogsusertable from "./Cameralogsusertable";
-// import Cameradetailsuser from "./CameraDetailsuser";
+
 const data = [
   {
     name: 'Page A',
@@ -77,36 +77,33 @@ const cameralogsMaintain=()=>{
       </ResponsiveContainer>
         </div>
         <div className="zone-camera-details  m-1 p-2   ">
-          {/* <h1 className="font-bold flex justify-center  text-xl"> Camera Details</h1> */}
-          {/* <Cameradetailsuser/> */}
+       
 
-            {/* camera details */}
+            <div className="cameralogs_zone_deatils   m-1 p-2 rounded-lg">
+              <h1 className="font-semibold text-xl  text-center">Zone Camera Details</h1>
 
-            <div class="cameralogs_zone_deatils   m-1 p-2 rounded-lg">
-              <h1 class="font-semibold text-xl  text-center">Zone Camera Details</h1>
-
-              <div class="flex flex-col gap-4">
-                <div class="p-3 bg-white rounded-lg text-gray-800">
-                      <h2 class="text-xl font-semibold ">Camera No</h2>
+              <div className="flex flex-col gap-4">
+                <div className="p-3 bg-white rounded-lg text-gray-800">
+                      <h2 className="text-xl font-semibold ">Camera No</h2>
       
                   </div>
 
-                 <div class="p-3 bg-white rounded-lg text-gray-800">
-                     <h2 class="text-xl font-semibold ">Camera Name</h2>
+                 <div className="p-3 bg-white rounded-lg text-gray-800">
+                     <h2 className="text-xl font-semibold ">Camera Name</h2>
      
                  </div>
 
-            <div class="p-3 bg-white rounded-lg text-gray-800">
-             <h2 class="text-xl font-semibold ">Device Id</h2>
+            <div className="p-3 bg-white rounded-lg text-gray-800">
+             <h2 className="text-xl font-semibold ">Device Id</h2>
       
             </div>
-            <div class="p-3 bg-white rounded-lg text-gray-800">
-                     <h2 class="text-xl font-semibold ">Ip Address</h2>
+            <div className="p-3 bg-white rounded-lg text-gray-800">
+                     <h2 className="text-xl font-semibold ">Ip Address</h2>
      
                  </div>
 
-            <div class="p-3 bg-white rounded-lg text-gray-800">
-             <h2 class="text-xl font-semibold ">Mac Address</h2>
+            <div className="p-3 bg-white rounded-lg text-gray-800">
+             <h2 className="text-xl font-semibold ">Mac Address</h2>
       
             </div>
          </div>
@@ -124,22 +121,22 @@ const cameralogsMaintain=()=>{
 
         
         </div>
-        <div class="cameralogs_zone_deatils   shadow-lg m-1 p-2 rounded-lg">
-              <h1 class="font-semibold text-xl  text-center">Zone Camera Details</h1>
+        <div className="cameralogs_zone_deatils   shadow-lg m-1 p-2 rounded-lg">
+              <h1 className="font-semibold text-xl  text-center">Zone Camera Details</h1>
 
-              <div class="flex flex-col gap-4">
-                <div class="p-3 bg-white rounded-lg text-gray-800">
-                      <h2 class="text-xl font-semibold ">Zone Name</h2>
+              <div className="flex flex-col gap-4">
+                <div className="p-3 bg-white rounded-lg text-gray-800">
+                      <h2 className="text-xl font-semibold ">Zone Name</h2>
       
                   </div>
 
-                 <div class="p-3 bg-white rounded-lg text-gray-800">
-                     <h2 class="text-xl font-semibold ">Zone Latitude</h2>
+                 <div className="p-3 bg-white rounded-lg text-gray-800">
+                     <h2 className="text-xl font-semibold ">Zone Latitude</h2>
      
                  </div>
 
-            <div class="p-3 bg-white rounded-lg text-gray-800">
-             <h2 class="text-xl font-semibold ">Zone Longitude</h2>
+            <div className="p-3 bg-white rounded-lg text-gray-800">
+             <h2 className="text-xl font-semibold ">Zone Longitude</h2>
       
             </div>
          </div>

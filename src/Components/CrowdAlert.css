@@ -1,0 +1,138 @@
+.conatinerAlert{
+    display: flex;
+  
+}
+
+.Alertbox{
+width: 60vh;
+height: 20vh;
+position: relative;
+  border: 1px solid #BBB;
+
+margin: 15px;
+}
+
+
+.Alertbox1{
+    width: 60vh;
+    height: 20vh;
+    position: relative;
+      border: 1px solid #BBB;
+    
+    margin: 15px;
+}
+.Alertbox2{
+    width: 60vh;
+    height: 20vh;
+    position: relative;
+      border: 1px solid #BBB;
+    
+    margin: 15px;
+}
+
+
+/****2nd box *******/
+.continerAlert2{
+    display: flex;
+}
+.AlertBox6{
+    width: 60vh;
+    height: 18vh;
+    margin: 15px;
+    position: relative;
+  border: 1px solid #BBB;
+
+
+
+}
+.AlertBox5{
+    width: 60vh;
+    height: 18vh;
+    margin: 15px;
+    position: relative;
+    border: 1px solid #BBB;
+  
+
+}
+.AlertBox4{
+    width: 60vh;
+    height: 18vh;
+    margin: 15px;
+    position: relative;
+    border: 1px solid #BBB;
+  
+
+}
+
+/*****box-3 ******/
+.CrowdAlertGraph{
+    height: 40vh;
+    position: relative;
+    border: 1px solid #BBB;
+
+}
+
+
+
+
+
+
+
+
+
+
+/****desgin in the box*******/
+
+  .ribbon {
+    position: absolute;
+    left: -5px; top: -5px;
+    z-index: 1;
+    overflow: hidden;
+    width: 75px; height: 75px;
+    text-align: right;
+  }
+  .ribbon span {
+    font-size: 10px;
+    font-weight: bold;
+    color: #FFF;
+    text-transform: uppercase;
+    text-align: center;
+    line-height: 20px;
+    transform: rotate(-45deg);
+    -webkit-transform: rotate(-45deg);
+    width: 100px;
+    display: block;
+    background: #79A70A;
+    background: linear-gradient(#2989d8 0%, #1e5799 100%);
+    box-shadow: 0 3px 10px -5px rgba(0, 0, 0, 1);
+    position: absolute;
+    top: 19px; left: -21px;
+  }
+  .ribbon span::before {
+    content: "";
+    position: absolute; left: 0px; top: 100%;
+    z-index: -1;
+    border-left: 3px solid #1e5799;
+    border-right: 3px solid transparent;
+    border-bottom: 3px solid transparent;
+    border-top: 3px solid #1e5799;
+  }
+  .ribbon span::after {
+    content: "";
+    position: absolute; right: 0px; top: 100%;
+    z-index: -1;
+    border-left: 3px solid transparent;
+    border-right: 3px solid #1e5799;
+    border-bottom: 3px solid transparent;
+    border-top: 3px solid #1e5799;
+  }
+  
+
+.graph{
+
+    text-shadow: 1px 2px 1px rgba(32, 122, 128, 0.78);
+    display: flex;
+    justify-content: center;
+}
+
+  /*****Graph desgin******/

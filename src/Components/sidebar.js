@@ -20,7 +20,7 @@ import CameraAltIcon from '@mui/icons-material/CameraAlt';
 import PlaceIcon from '@mui/icons-material/Place';
 import { useSelector } from "react-redux";
 import { useTheme } from "./Utills/Themeconatext";
-import EditProfile from "./EditProfile";
+
 
 import { Link } from "react-router-dom";
 const Sidebar = () => {
@@ -71,9 +71,9 @@ const Sidebar = () => {
                 </li>
                 {isAlertOpen && (
                     <>
-                        <li className="hover:text-blue-600 py-1 px-4 "><GroupsIcon/>Crowd Alert</li>
+                       <Link to="/CrowdAlert"><li className="hover:text-blue-600 py-1 px-4 "><GroupsIcon/>Crowd Alert</li></Link>
                         <li className="hover:text-blue-600 py-1 px-4  "><LocalFireDepartmentIcon/>Fire </li>
-                        <li className="hover:text-blue-600 py-1 px-4 "><DangerousIcon/>Wrong Parking</li>
+                      <Link to="/WrongParking"> <li className="hover:text-blue-600 py-1 px-4 "><DangerousIcon/>Wrong Parking</li></Link>
                         <li className="hover:text-blue-600 py-1 px-4  "><AcUnitIcon/>Air quality</li>
                         <li className="hover:text-blue-600 py-1 px-4 "><InvertColorsIcon/>Water quality</li>
                     </>
@@ -110,9 +110,9 @@ const Sidebar = () => {
                 {isProfileOpen && (
                     <>
                       <Link to="/EditProfile"><li className="hover:text-blue-600 py-1 px-4 "><EditIcon/>Edit Profile</li></Link> 
-                        <li className="hover:text-blue-600 py-1 px-4 ">< SensorsIcon/>Add sensor</li>
-                        <li className="hover:text-blue-600 py-1 px-4  ">< CameraAltIcon />Add camera</li>
-                        <li className="hover:text-blue-600 py-1 px-4 "><PlaceIcon/> Add zone</li>
+                      <Link to="/AddSensor"> <li className="hover:text-blue-600 py-1 px-4 ">< SensorsIcon/>Add sensor</li></Link>
+                     <Link to="/AddCamera"><li className="hover:text-blue-600 py-1 px-4  ">< CameraAltIcon />Add camera</li></Link>
+                      <Link to="/AddZone">  <li className="hover:text-blue-600 py-1 px-4 "><PlaceIcon/> Add zone</li></Link>
                     </>
                 )}
                  <li className="flex items-center py-2 px-3 font-semibold hover:bg-gray-200">

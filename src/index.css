@@ -306,3 +306,384 @@ body {
 width: 170vh;
 
 }
+
+
+
+
+/* EditProfileForm.css */
+/* EditProfile.css */
+
+.parent-edit {
+	display: flex;
+	width: 190vh;
+	height: 87vh;
+  }
+  
+  .edit_container {
+	flex: 1;
+	padding: 20px;
+	background-color: #f7f7f7;
+	display: flex;
+	justify-content: center;
+  }
+  
+  .edit-form {
+	background-color: #ffffff;
+	border-radius: 10px;
+	padding: 20px;
+	box-shadow: 0px 2px 6px rgba(0, 0, 0, 0.1);
+	width: 80vh;
+  }
+  
+  .profile-section {
+	flex: 1;
+	display: flex;
+     justify-content: center;
+	padding-right: 20px;
+  }
+  
+  .profile-image {
+	width: 130px;
+	height: 130px;
+	border-radius: 50%;
+	object-fit: cover;
+  }
+  
+  .name-section {
+	flex: 1;
+	display: flex;
+	flex-direction: row;
+	gap: 13vh;
+  }
+  
+  .input-wrapper {
+	display: flex;
+	flex-direction: column;
+  }
+  
+  .input-wrapper label {
+	font-weight: bold;
+	margin-bottom: 6px;
+  }
+  
+  .input-wrapper input[type="text"] {
+	width: 100%;
+	padding: 8px;
+	border: 1px solid #ccc;
+	border-radius: 4px;
+	margin-bottom: 10px;
+  }
+  
+  .edit-form button {
+	padding: 10px 20px;
+	background-color: #007bff;
+	color: #fff;
+	border: none;
+	border-radius: 3px;
+	cursor: pointer;
+	margin-top: 10px;
+  }
+  
+  .edit-form button:hover {
+	background-color: #0056b3;
+  }
+  
+  .progress-container {
+	width: 100%;
+	height: 3px;
+	background-color: #ccc;
+	border-radius: 5px;
+	margin-top: 20px;
+  }
+  
+  .progress-bar {
+	width: 50%; /* Change this value to control the progress */
+	height: 100%;
+	background-color: #007bff;
+	border-radius: 3px;
+  }
+  
+
+
+
+/* Sidebar Styling */
+.sidebar-profile {
+  width: 250px;
+
+  padding: 20px;
+  transition: width 0.3s;
+}
+
+.sidebar-profile ul {
+  list-style: none;
+  padding: 0;
+}
+
+.sidebar-profile ul li {
+  margin-bottom: 15px;
+  cursor: pointer;
+  transition: background-color 0.3s;
+}
+
+.sidebar-profile ul li:hover {
+  background-color: rgb(154, 183, 192);
+}
+
+/* Sidebar Hover Effects */
+.sidebar-profile ul li:hover {
+  background-color: rgb(187, 214, 223);
+}
+
+/* Rest of your styling */
+
+
+  /*****ADD Sensor ******/
+ 
+
+
+  /* AddSensor.css */
+.Add-sensor {
+	display: flex;
+	width: 100vw;
+	height: 80vh;
+  }
+  
+  .Add_sensor_conatiner {
+	flex: 1;
+	padding: 20px;
+	background-color: #f7f7f7;
+	display: flex;
+	justify-content: center;
+  }
+  
+  .Add_sensor_form {
+	background-color: #ffffff;
+	border-radius: 10px;
+	padding: 20px;
+	box-shadow: 0px 2px 6px rgba(0, 0, 0, 0.1);
+	width: 60%;
+    height: 90%;
+	margin: auto;
+  }
+  
+  .form-row {
+	display: flex;
+	gap: 20px;
+	margin-bottom: 15px;
+  }
+
+  
+  .input-wrapper {
+	flex: 1;
+	display: flex;
+	flex-direction: column;
+  }
+  
+  .input-wrapper label {
+	font-weight: bold;
+	margin-bottom: 6px;
+  }
+  .profile_box{
+	margin: 20px;
+  }
+  
+  .input-wrapper input[type="text"] {
+	width: 100%;
+	padding: 10px;
+	border: 1px solid #ccc;
+	border-radius: 4px;
+	transition: border-color 0.3s;
+  }
+  
+  .input-wrapper input[type="text"]:focus {
+	border-color: #007bff;
+  }
+  
+  .btn-primary,
+  .btn-secondary {
+	padding: 10px 20px;
+	border: none;
+	border-radius: 3px;
+	cursor: pointer;
+	transition: background-color 0.3s;
+  }
+  
+  .btn-primary {
+	background-color: #007bff;
+	color: #fff;
+  }
+  
+  .btn-secondary {
+	background-color: #ccc;
+	color: #000;
+  }
+  
+  .btn-primary:hover,
+  .btn-secondary:hover {
+	background-color: #0056b3;
+  }
+  
+
+
+
+
+  /*****wrong parking conatiner*********/
+ .parking_details_container{
+width: 195vh;
+height: 83vh;
+ }
+ .wrong-parking-zone-deatils{
+	width: 54vh;
+	height: 15vh;
+	position: relative;
+	border: 1px solid #BBB;
+
+	
+	margin: 10px;
+	padding: 20px;
+  
+  }
+
+
+
+
+  .ribbon {
+	position: absolute;
+	left: -5px; top: -5px;
+	z-index: 1;
+	overflow: hidden;
+	width: 75px; height: 75px;
+	text-align: right;
+  }
+  .ribbon span {
+	font-size: 10px;
+	font-weight: bold;
+	color: #FFF;
+	text-transform: uppercase;
+	text-align: center;
+	line-height: 20px;
+	transform: rotate(-45deg);
+	-webkit-transform: rotate(-45deg);
+	width: 100px;
+	display: block;
+	background: #79A70A;
+	background: linear-gradient(#2989d8 0%, #1e5799 100%);
+	box-shadow: 0 3px 10px -5px rgba(0, 0, 0, 1);
+	position: absolute;
+	top: 19px; left: -21px;
+  }
+  .ribbon span::before {
+	content: "";
+	position: absolute; left: 0px; top: 100%;
+	z-index: -1;
+	border-left: 3px solid #1e5799;
+	border-right: 3px solid transparent;
+	border-bottom: 3px solid transparent;
+	border-top: 3px solid #1e5799;
+  }
+  .ribbon span::after {
+	content: "";
+	position: absolute; right: 0px; top: 100%;
+	z-index: -1;
+	border-left: 3px solid transparent;
+	border-right: 3px solid #1e5799;
+	border-bottom: 3px solid transparent;
+	border-top: 3px solid #1e5799;
+  }
+  
+
+ .wrong-parking-zone-deatils1{
+	width: 40vh;
+	height: 10vh;
+	margin: 10px;
+	padding: 20px;
+	position: relative;
+	border: 1px solid #BBB;
+	
+	margin: 10px;
+	padding: 20px;
+
+ }
+.wrong-parking-graph{
+	height: 30vh;
+	margin: 10px;
+	padding: 20px;
+}
+.wrong-parking-table{
+	height: 22vh;
+	margin: 10px;
+	padding: 20px;
+}
+
+
+
+/***** search page box -1 **/
+.box {
+	width: 55vh;
+	height: 25vh;
+	position: relative;
+	border: 1px solid #BBB;
+	
+  }
+  .ribbon {
+	position: absolute;
+	left: -5px; top: -5px;
+	z-index: 1;
+	overflow: hidden;
+	width: 75px; height: 75px;
+	text-align: right;
+  }
+  .ribbon span {
+	font-size: 10px;
+	font-weight: bold;
+	color: #FFF;
+	text-transform: uppercase;
+	text-align: center;
+	line-height: 20px;
+	transform: rotate(-45deg);
+	-webkit-transform: rotate(-45deg);
+	width: 100px;
+	display: block;
+	background: #79A70A;
+	background: linear-gradient(#2989d8 0%, #1e5799 100%);
+	box-shadow: 0 3px 10px -5px rgba(0, 0, 0, 1);
+	position: absolute;
+	top: 19px; left: -21px;
+  }
+  .ribbon span::before {
+	content: "";
+	position: absolute; left: 0px; top: 100%;
+	z-index: -1;
+	border-left: 3px solid #1e5799;
+	border-right: 3px solid transparent;
+	border-bottom: 3px solid transparent;
+	border-top: 3px solid #1e5799;
+  }
+  .ribbon span::after {
+	content: "";
+	position: absolute; right: 0px; top: 100%;
+	z-index: -1;
+	border-left: 3px solid transparent;
+	border-right: 3px solid #1e5799;
+	border-bottom: 3px solid transparent;
+	border-top: 3px solid #1e5799;
+  }
+  
+  .progress-container1 {
+	width: 100%;
+	height: 5px;
+	background-color: #ccc;
+	border-radius: 5px;
+	margin-top: 20px;
+  }
+  
+  .progress-bar1 {
+	width: 50%; /* Change this value to control the progress */
+	height: 100%;
+	background-color: #007bff;
+	border-radius: 3px;
+  }
+  
+
+
+  /***2nd box of pi chart searchlogs**/

@@ -2,21 +2,28 @@ import React from "react";
 import Header from "./Components/Header";
 import { Provider } from "react-redux";
 import Store from "./Components/Utills/store";
-import Body from "./Components/Body";
 import { ThemeProvider } from "./Components/Utills/Themeconatext";
-import { createBrowserRouter, Outlet } from "react-router-dom";
+import { createBrowserRouter, Outlet, Route, Link } from "react-router-dom";
+import Login from "./Components/Login";
+import SignUp from "./Components/SignUp";
+import Body from "./Components/Body";
 import Searchdashboard from "./Components/Searchdashboard";
 import ZoneDashboard from "./Components/ZoneDashboard";
 import Cameralogsdashboard from "./Components/CameraLogdash";
 import SensorLogsDashboard from "./Components/sensorLogsDashbord";
 import EditProfile from "./Components/EditProfile";
+import AddSensor from "./Components/AddSensor";
+import AddCamera from "./AddCamera";
+import WrongParking from "./Components/WrongParking";
+import CrowdAlert from "./Components/CrowdAlert";
+import AddZone from "./AddZone";
 
 function App() {
   return (
     <Provider store={Store}>
       <ThemeProvider>
         <div className="App">
-          <Header />
+
           <Outlet />
         </div>
       </ThemeProvider>
@@ -24,13 +31,22 @@ function App() {
   );
 }
 
-export const appRout = createBrowserRouter([
+const routes = [
   {
     path: "/",
     element: <App />,
     children: [
       {
+        path: "",
         index: true,
+        element: <Login />,
+      },
+      {
+        path: "signup",
+        element: <SignUp />,
+      },
+      {
+        path: '/MainDashboard',
         element: <Body />,
       },
       {
@@ -53,8 +69,30 @@ export const appRout = createBrowserRouter([
         path: "/EditProfile",
         element: <EditProfile />,
       },
+      {
+        path: "/AddSensor",
+        element: <AddSensor />,
+      },
+      {
+        path: "/AddCamera",
+        element: <AddCamera />,
+      },
+      {
+        path: "/AddZone",
+        element: <AddZone />,
+      },
+      {
+        path: "/wrongParking",
+        element: <WrongParking />,
+      },
+      {
+        path: "/CrowdAlert",
+        element: <CrowdAlert />,
+      },
     ],
   },
-]);
+];
+
+export const appRout = createBrowserRouter(routes);
 
 export default App;
