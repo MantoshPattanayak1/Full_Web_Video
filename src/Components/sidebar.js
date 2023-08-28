@@ -18,8 +18,12 @@ import SensorsIcon from '@mui/icons-material/Sensors';
 import EditIcon from '@mui/icons-material/Edit';
 import CameraAltIcon from '@mui/icons-material/CameraAlt';
 import PlaceIcon from '@mui/icons-material/Place';
+import OpacityIcon from '@mui/icons-material/Opacity';
+import Brightness1Icon from '@mui/icons-material/Brightness1';
+import EnergySavingsLeafIcon from '@mui/icons-material/EnergySavingsLeaf';
 import { useSelector } from "react-redux";
 import { useTheme } from "./Utills/Themeconatext";
+
 
 
 import { Link } from "react-router-dom";
@@ -94,8 +98,10 @@ const Sidebar = () => {
                 </li>
                 {IslogOpen && (
                     <>
-                  <Link to="/Cameralogsdashboard">  <li className="hover:text-blue-600 py-1 px-4 "><CameraAltIcon/>Camera Logs</li> </Link> 
-                    <Link to="/SensorLogsDashboard">  <li className="hover:text-blue-600 py-1 px-4  "><SensorsIcon/>Sensor Logs </li></Link> 
+                 <li className="hover:text-blue-600 py-1 px-4 "><AcUnitIcon/>Air Quality</li> 
+                      <li className="hover:text-blue-600 py-1 px-4  "><EnergySavingsLeafIcon/>Energy Meter </li>
+                <Link to="/WaterMeter">   <li className="hover:text-blue-600 py-1 px-4  "><OpacityIcon/>Water Meter </li></Link>  
+                    <li className="hover:text-blue-600 py-1 px-4  "><Brightness1Icon/>Level Meter </li>
                        
                     </>
                 )}

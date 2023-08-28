@@ -1,0 +1,138 @@
+/* Reset some default styles */
+body, html {
+    margin: 0;
+    padding: 0;
+    height: 100%;
+    font-family: Arial, sans-serif;
+}
+
+/* Set common styles for WaterMeter component */
+.WaterMeter {
+    height: 100%;
+}
+
+.Content {
+    display: flex;
+    height: 100%;
+}
+
+/* Header styles */
+.Header {
+    background-color: #333;
+    
+    padding: 10px;
+    text-align: center;
+}
+
+/* Sidebar styles */
+.Sidebar {
+    
+    padding: 10px;
+}
+
+/* Main container styles */
+.MainContainer {
+    display: flex;
+    flex-direction: column;
+    flex-grow: 1;
+    padding: 10px;
+    box-sizing: border-box;
+}
+
+/* Box styles */
+.Boxes {
+    display: flex;
+    flex-wrap: wrap;
+}
+
+.Boxes1 {
+    display: flex;
+    flex-wrap: wrap;
+    height: 40vh;
+}
+
+
+.drop-down {
+    height: 5vh;
+}
+
+.Details, .maxMeter, .Graph {
+    flex: 1;
+    padding: 20px;
+    margin: 10px;
+    box-sizing: border-box;
+   
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+.shadow1{
+    box-shadow: inset 0px 4px 4px 0px rgba(11, 112, 128, 1);
+}
+/* ... */
+
+.drop-down {
+    position: relative;
+    cursor: pointer;
+
+  }
+  
+  .select {
+    width: 10%;
+    padding: 10px;
+    font-size: 16px;
+    border: none;
+    border-radius: 5px;
+    gap: 20px;
+    
+  }
+  
+  /* ... */
+  
+
+/* Responsive design */
+/* Small devices (portrait phones, less than 576px) */
+@media (max-width: 575.98px) {
+    .Boxes {
+        flex-direction: column;
+    }
+    
+    .Boxes1 {
+        height: auto;
+    }
+    
+    .drop-down {
+        height: 3vh;
+    }
+}
+
+/* Medium devices (tablets, 768px and up) */
+@media (min-width: 576px) and (max-width: 991.98px) {
+    .Boxes {
+        flex-direction: row;
+        flex-wrap: wrap;
+    }
+    
+    .Boxes1 {
+        height: 20vh;
+    }
+    
+    /* Additional styles as needed */
+}
+
+/* Large devices (desktops, 992px and up) */
+@media (min-width: 992px) {
+    .Boxes {
+        flex-basis: 33.33%;
+    }
+    
+    .Boxes1 {
+        height: 30vh;
+    }
+    
+    /* Additional styles as needed */
+}
+
+/* Extra large devices (large desktops, 1200px and up) */
+@media (min-width: 1200px) {
+    /* Additional styles as needed */
+}

@@ -1,5 +1,4 @@
 import React from "react";
-import Header from "./Components/Header";
 import { Provider } from "react-redux";
 import Store from "./Components/Utills/store";
 import { ThemeProvider } from "./Components/Utills/Themeconatext";
@@ -9,7 +8,6 @@ import SignUp from "./Components/SignUp";
 import Body from "./Components/Body";
 import Searchdashboard from "./Components/Searchdashboard";
 import ZoneDashboard from "./Components/ZoneDashboard";
-import Cameralogsdashboard from "./Components/CameraLogdash";
 import SensorLogsDashboard from "./Components/sensorLogsDashbord";
 import EditProfile from "./Components/EditProfile";
 import AddSensor from "./Components/AddSensor";
@@ -18,6 +16,7 @@ import WrongParking from "./Components/WrongParking";
 import CrowdAlert from "./Components/CrowdAlert";
 import AddZone from "./AddZone";
 import AirAlerts from "./pages/AirAlerts";
+import WaterMeter from "./Components/Logs/WaterMeter";
 import './App.css'
 import LiveVideo from "./pages/LiveVideo";
 function App() {
@@ -59,10 +58,7 @@ const routes = [
         path: "/ZoneDashboard",
         element: <ZoneDashboard />,
       },
-      {
-        path: "/Cameralogsdashboard",
-        element: <Cameralogsdashboard />,
-      },
+     
       {
         path: "/SensorLogsDashboard",
         element: <SensorLogsDashboard />,
@@ -99,6 +95,10 @@ const routes = [
       {
         path: "/LiveVideo",
         element: <LiveVideo />,
+      },
+      {
+        path: "/WaterMeter",
+        element: <WaterMeter />,
       },
     ],
   },

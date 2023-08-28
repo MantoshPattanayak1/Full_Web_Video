@@ -84,6 +84,7 @@ const wrongParking=()=>{
            
 
              </div>
+             
              <div  className="wrong-parking-graph shadow-lg bg-gray-200">
                          <WrongParkingGraph/>
             </div>
