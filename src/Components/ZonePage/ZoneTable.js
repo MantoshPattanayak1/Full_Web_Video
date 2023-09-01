@@ -1,13 +1,15 @@
 
-
+import React from "react";
 import { useTheme } from "../Utills/Themeconatext";
-const WaterMeterTable=({users})=>{
+
+import InfoIcon from '@mui/icons-material/Info';
+const ZoneTable=({users})=>{
     const { IsDarkMode } = useTheme();
     return(
 
-        <div className=  {`table-container shadow-lg ${IsDarkMode ? 'dark-mode' : ''}`}> 
-        <div className= {`table-scroll ${IsDarkMode ? 'dark-mode' : ''}`}>
-          <table className= {`table ${IsDarkMode ? 'dark-mode' : ''}`}>
+        <div className=  {`table-Zone-container shadow-lg ${IsDarkMode ? 'dark-mode' : ''}`}> 
+        <div className= {`table-Zone-scroll ${IsDarkMode ? 'dark-mode' : ''}`}>
+          <table className= {`table1 ${IsDarkMode ? 'dark-mode' : ''}`}>
             <thead>
               <tr>
                 <th>Device Id</th>
@@ -17,6 +19,7 @@ const WaterMeterTable=({users})=>{
                 <th>Device Status</th>
                 <th>Event Type</th>
                 <th>Date/Time</th>
+                <th>Details</th>
               </tr>
             </thead>
             <tbody>
@@ -29,6 +32,11 @@ const WaterMeterTable=({users})=>{
                   <td>{user.DeviceStatus}</td>
                   <td>{user.EventType}</td>
                   <td>{user.Date}</td>
+                  <th className="flex items-center justify-center ">
+                      <a href="/new-page-url">
+                          <InfoIcon className="text-blue-500 hover:text-red-700 cursor-pointer" />
+                        </a>
+                 </th>
                 </tr>
               ))}
             </tbody>
@@ -37,4 +45,4 @@ const WaterMeterTable=({users})=>{
       </div>
     )
 }
-export default WaterMeterTable;
+export default ZoneTable;

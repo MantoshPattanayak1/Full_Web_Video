@@ -1,7 +1,7 @@
 
 
 import { useTheme } from "../Utills/Themeconatext";
-const WaterMeterTable=({users})=>{
+const EnergyTable=({users})=>{
     const { IsDarkMode } = useTheme();
     return(
 
@@ -37,4 +37,4 @@ const WaterMeterTable=({users})=>{
       </div>
     )
 }
-export default WaterMeterTable;
+export default EnergyTable;

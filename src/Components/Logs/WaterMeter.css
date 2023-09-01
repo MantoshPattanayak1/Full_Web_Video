@@ -20,15 +20,11 @@ body, html {
 .Header {
     background-color: #333;
     
-    padding: 10px;
+
     text-align: center;
 }
 
-/* Sidebar styles */
-.Sidebar {
-    
-    padding: 10px;
-}
+
 
 /* Main container styles */
 .MainContainer {
@@ -47,10 +43,15 @@ body, html {
 
 .Boxes1 {
     display: flex;
-    flex-wrap: wrap;
-    height: 40vh;
+   
+   
 }
-
+.box-2{
+    height: 12vh;
+}
+.box-3{
+    height: 32vh;
+}
 
 .drop-down {
     height: 5vh;
@@ -58,7 +59,7 @@ body, html {
 
 .Details, .maxMeter, .Graph {
     flex: 1;
-    padding: 20px;
+    padding: 10px;
     margin: 10px;
     box-sizing: border-box;
    
@@ -83,11 +84,151 @@ body, html {
     border: none;
     border-radius: 5px;
     gap: 20px;
-    
+  }
+  .table-container{
+    height: 26vh;
   }
   
   /* ... */
+  .progress-container1 {
+	width: 100%;
+	height: 5px;
+	background-color: #ccc;
+    margin-top: 1px;
+  }
   
+  .progress-bar2{
+	width: 50%; /* Change this value to control the progress */
+	height: 100%;
+	background-color: #458cd8;
+  }
+  .meter_water_name{
+    background: #121FCF;
+    background: radial-gradient(circle farthest-corner at bottom center, #121FCF 0%, #CF1512 100%);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+
+  }
+
+ 
+  .normal_box:hover {
+    transform: translateY(-2px);
+    box-shadow: 0px 2px 5px 1px rgba(0, 0, 0, 0.25);
+    background-color:rgb(212, 209, 209);
+    color: rgb(0, 149, 255);
+  }
+
+
+
+/****AbNoraml Popup conatiner ******/
+
+.popup-container {
+    position: fixed;
+    top: 35%;
+
+    transform: translate(-50%, -50%);
+    background-color: white;
+    border-radius: 8px;
+    padding: 10px;
+    width: 45vh;
+    height: 25vh;
+    box-shadow: 0px 2px 6px rgba(0, 0, 0, 0.1);
+    z-index: 1000;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+  
+  .scroll {
+    max-height: 80vh;
+    overflow: auto;
+  }
+  
+  .popup-container h1 {
+    font-size: 1.5rem;
+    margin-bottom: 10px;
+  }
+  
+  .popup-container button {
+    background-color: #f0f0f0;
+    border: none;
+    padding: 5px 10px;
+    border-radius: 4px;
+    cursor: pointer;
+    margin-top: 10px;
+    font-size: 14px;
+    color: #333;
+    transition: background-color 0.3s ease-in-out;
+  }
+  
+  .popup-container button:hover {
+    background-color: #ddd;
+  }
+  
+
+
+
+
+
+
+
+
+  .popup-container {
+    position: fixed;
+    top: 35%;
+    transform: translate(-50%, -50%);
+    background-color: white;
+    border-radius: 8px;
+    padding: 10px;
+    width: 45vh;
+    height: 25vh;
+    box-shadow: 0px 2px 6px rgba(0, 0, 0, 0.1);
+    z-index: 1000;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+  
+  .popup-container h1 {
+    font-size: 1.5rem;
+    margin-bottom: 10px;
+  }
+  
+  .popup-container button {
+    background-color: #f0f0f0;
+    border: none;
+    padding: 5px 10px;
+    border-radius: 4px;
+    cursor: pointer;
+  }
+  
+ 
+
+.close_btn{
+  
+    border: none;
+    padding: 5px 10px;
+    border-radius: 4px;
+    cursor: pointer;
+    margin-top: 10px;
+    font-size: 14px;
+
+    transition: background-color 0.3s ease-in-out;
+}
+.close_btn:hover {
+    transform: translateY(-2px);
+    box-shadow: 0px 2px 5px 1px rgba(0, 0, 0, 0.25);
+
+ 
+  }
+
+
+
+
+
+
+
+
 
 /* Responsive design */
 /* Small devices (portrait phones, less than 576px) */
@@ -136,3 +277,4 @@ body, html {
 @media (min-width: 1200px) {
     /* Additional styles as needed */
 }
+

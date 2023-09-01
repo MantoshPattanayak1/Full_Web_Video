@@ -1,0 +1,279 @@
+/* Default styles */
+.zone-dashboard {
+    display: flex;
+    flex-direction: column;
+    height: 100vh;
+}
+
+.flex {
+    display: flex;
+}
+
+.content {
+    flex: 1;
+    display: flex;
+    align-items: stretch;
+    flex-direction: column;
+}
+
+.box-container {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 20px;
+    padding: 20px;
+}
+
+.box {
+    padding: 20px;
+    flex: 1;
+    border-radius: 30px;
+    position: relative;
+}
+
+
+
+
+
+/* ... Other CSS rules ... */
+
+.title-container {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    padding: 10px;
+    background-color: #f0f0f0;
+    border-radius: 8px;
+   
+}
+
+.title {
+    font-weight: bold;
+    font-size: 1.5rem;
+    text-align: center;
+    margin-right: 10px;
+}
+
+.icon {
+    color: #fe0303; /* Customize the color as needed */
+    font-size: 1.5rem;
+}
+.icon1{
+     color: #000;
+    font-size: 1.5rem;
+}
+.icon2{
+    color: #000;
+   
+    font-size: 1.5rem;
+}
+.icon3{
+   color: #e25822;
+    font-size: 1.5rem;
+}
+
+
+/********************Box-status-camera**************************************/
+/* ZoneTable.css */
+.table-Zone-container {
+    max-width: 100%;
+    overflow: hidden;
+}
+
+.table-Zone-scroll {
+    max-height: 580px; /* Adjust the max height for larger screens */
+    overflow: auto;
+
+}
+
+.table1 {
+    width: 100%;
+    border-collapse: collapse;
+    border-spacing: 0;
+    table-layout: fixed; /* Ensure table layout doesn't exceed parent width */
+}
+
+.table1 th,
+.table1 td {
+    padding: 10px;
+    border-bottom: 1px solid #e2e8f0;
+    white-space: nowrap; /* Prevent cell content from wrapping */
+    overflow: hidden; /* Hide overflow content */
+    text-overflow: ellipsis; /* Show ellipsis (...) for overflow content */
+}
+
+.table1 th {
+    background-color: #f7fafc;
+    position: sticky;
+    top: 0;
+    z-index: 1;
+}
+
+.table1 tbody tr:nth-child(even) {
+    background-color: #f7fafc;
+}
+
+/* If you want to style the icon */
+.table1 th:last-child,
+.table1 td:last-child {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+/* Responsive adjustments */
+@media (max-width: 768px) {
+    .table1 th,
+    .table1 td {
+        padding: 6px; /* Reduce padding for smaller screens */
+        font-size: 14px; /* Reduce font size for smaller screens */
+    }
+
+    .table-Zone-scroll {
+        max-height: 60vh; /* Adjust max height using viewport height unit */
+    }
+}
+
+
+/***XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX***********************/
+
+/*****Text desgin **********************************************/
+.title {
+    --s: 0.1em;   /* the thickness of the line */
+    --c: #2c4bff; /* the color */
+    
+    color: #0000;
+    padding-bottom: var(--s);
+    background: 
+      linear-gradient(90deg,var(--c) 50%,#000 0) calc(100% - var(--_p,0%))/200% 100%,
+      linear-gradient(var(--c) 0 0) 0% 100%/var(--_p,0%) var(--s) no-repeat;
+    -webkit-background-clip: text,padding-box;
+            background-clip: text,padding-box;
+    transition: 0.5s;
+  }
+  .title:hover {--_p: 80%}
+  
+
+
+/*********XXXXXXXXXXXXXXXXXXXXXXX***********/
+.ribbon {
+    position: absolute;
+    left: -5px; top: -5px;
+    z-index: 1;
+    overflow: hidden;
+    width: 75px; height: 75px;
+    text-align: right;
+  }
+  .ribbon span {
+    font-size: 10px;
+    font-weight: bold;
+    color: #FFF;
+    text-transform: uppercase;
+    text-align: center;
+    line-height: 20px;
+    transform: rotate(-45deg);
+    -webkit-transform: rotate(-45deg);
+    width: 100px;
+    display: block;
+    background: #79A70A;
+    background: linear-gradient(#2989d8 0%, #1e5799 100%);
+    box-shadow: 0 3px 10px -5px rgba(0, 0, 0, 1);
+    position: absolute;
+    top: 19px; left: -21px;
+  }
+  .ribbon span::before {
+    content: "";
+    position: absolute; left: 0px; top: 100%;
+    z-index: -1;
+    border-left: 3px solid #1e5799;
+    border-right: 3px solid transparent;
+    border-bottom: 3px solid transparent;
+    border-top: 3px solid #1e5799;
+  }
+  .ribbon span::after {
+    content: "";
+    position: absolute; right: 0px; top: 100%;
+    z-index: -1;
+    border-left: 3px solid transparent;
+    border-right: 3px solid #1e5799;
+    border-bottom: 3px solid transparent;
+    border-top: 3px solid #1e5799;
+  }
+
+
+/*******XXXXXXXXXXXXXXXXXXXXXXXXXXX***********/
+
+/* Media queries for responsiveness */
+@media (max-width: 768px) {
+    .content {
+        flex-direction: column;
+    }
+   
+    .box-container {
+        gap: 15px;
+        padding: 15px;
+    }
+   
+    .box {
+        padding: 15px;
+    }
+   
+    .table-box {
+        padding: 15px;
+    }
+}
+@media (max-width: 768px) {
+    /* Adjust .content layout for smaller screens */
+    .content {
+        flex-direction: column;
+    }
+
+    /* Adjust .box-container spacing and padding */
+    .box-container {
+        gap: 15px;
+        padding: 15px;
+    }
+
+    /* Adjust .box padding */
+    .box {
+        padding: 15px;
+    }
+
+    /* Adjust .table-Zone-scroll max height using vh unit */
+    .table-Zone-scroll {
+        max-height: 60vh;
+    }
+
+    /* Add more responsive adjustments as needed */
+    .ribbon {
+        width: 50px;
+        height: 50px;
+        left: -3px;
+        top: -3px;
+    }
+
+    .ribbon span {
+        font-size: 8px;
+        line-height: 16px;
+        width: 70px;
+        top: 14px;
+        left: -17px;
+    }
+
+    /* ... Other responsive adjustments ... */
+}
+
+/* Media queries for specific elements */
+@media (max-width: 600px) {
+    /* Further adjustments for smaller screens */
+    .box-container {
+        gap: 10px;
+        padding: 10px;
+    }
+
+    .box {
+        padding: 10px;
+    }
+
+    /* ... Additional specific adjustments ... */
+}

@@ -1,12 +1,13 @@
-
+import React from "react";
 
 import { useTheme } from "../Utills/Themeconatext";
-const WaterMeterTable=({users})=>{
+
+const CameraDetailsTable=({users})=>{
     const { IsDarkMode } = useTheme();
     return(
 
-        <div className=  {`table-container shadow-lg ${IsDarkMode ? 'dark-mode' : ''}`}> 
-        <div className= {`table-scroll ${IsDarkMode ? 'dark-mode' : ''}`}>
+        <div className="table-container" >
+        <div className="table-scroll">
           <table className= {`table ${IsDarkMode ? 'dark-mode' : ''}`}>
             <thead>
               <tr>
@@ -15,8 +16,7 @@ const WaterMeterTable=({users})=>{
                 <th>Zone</th>
                 <th>Device Ip</th>
                 <th>Device Status</th>
-                <th>Event Type</th>
-                <th>Date/Time</th>
+               
               </tr>
             </thead>
             <tbody>
@@ -27,14 +27,14 @@ const WaterMeterTable=({users})=>{
                   <td>{user.Zone}</td>
                   <td>{user.Deviceip}</td>
                   <td>{user.DeviceStatus}</td>
-                  <td>{user.EventType}</td>
-                  <td>{user.Date}</td>
+                 
                 </tr>
               ))}
             </tbody>
           </table>
         </div>
       </div>
-    )
-}
-export default WaterMeterTable;
+    );
+};
+
+export default CameraDetailsTable;

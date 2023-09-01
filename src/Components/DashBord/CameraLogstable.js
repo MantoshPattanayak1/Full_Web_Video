@@ -1,12 +1,14 @@
-
+import React from "react";
 
 import { useTheme } from "../Utills/Themeconatext";
-const WaterMeterTable=({users})=>{
+
+const Cameralogstable=({users})=>{
+    // eslint-disable-next-line no-undef
     const { IsDarkMode } = useTheme();
     return(
 
-        <div className=  {`table-container shadow-lg ${IsDarkMode ? 'dark-mode' : ''}`}> 
-        <div className= {`table-scroll ${IsDarkMode ? 'dark-mode' : ''}`}>
+        <div className="table-container shadow-lg" >
+        <div className="table-scroll">
           <table className= {`table ${IsDarkMode ? 'dark-mode' : ''}`}>
             <thead>
               <tr>
@@ -36,5 +38,5 @@ const WaterMeterTable=({users})=>{
         </div>
       </div>
     )
-}
-export default WaterMeterTable;
+};
+export default Cameralogstable;

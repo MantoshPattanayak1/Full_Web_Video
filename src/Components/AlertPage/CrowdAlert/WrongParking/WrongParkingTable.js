@@ -1,12 +1,12 @@
 
-
-import { useTheme } from "../Utills/Themeconatext";
-const WaterMeterTable=({users})=>{
+import React from "react";
+import { useTheme } from "../../../Utills/Themeconatext";
+const WrongParkingTable=({users})=>{
     const { IsDarkMode } = useTheme();
     return(
 
-        <div className=  {`table-container shadow-lg ${IsDarkMode ? 'dark-mode' : ''}`}> 
-        <div className= {`table-scroll ${IsDarkMode ? 'dark-mode' : ''}`}>
+        <div className="table-container shadow-lg bg-gray-200" >
+        <div className="table-scroll">
           <table className= {`table ${IsDarkMode ? 'dark-mode' : ''}`}>
             <thead>
               <tr>
@@ -36,5 +36,5 @@ const WaterMeterTable=({users})=>{
         </div>
       </div>
     )
-}
-export default WaterMeterTable;
+};
+export default WrongParkingTable;

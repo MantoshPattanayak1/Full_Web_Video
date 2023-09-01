@@ -1,10 +1,7 @@
+
 import React from "react";
-import { BarChart, Bar, XAxis, YAxis, CartesianGrid, Tooltip, Legend, ResponsiveContainer } from 'recharts';
+import { BarChart, Bar,  XAxis, YAxis, CartesianGrid, Tooltip, Legend, ResponsiveContainer } from 'recharts';
 import "./Graph.css"
-
-
-
-
 const data = [
     {
       name: 'Page A',
@@ -49,14 +46,15 @@ const data = [
       amt: 2100,
     },
   ];
-  const WaterMeterGraph = () => {
-    return (
-      <div className="EneryGraph ">
-        <ResponsiveContainer>
+const AirGraph=()=>{
+    return(
+        <div className="EneryGraph ">
+        <ResponsiveContainer >
         <BarChart
-      
+          width={400}
+          height={200}
           data={data}
-        
+         
         >
           <CartesianGrid strokeDasharray="3 3" />
           <XAxis dataKey="name" />
@@ -68,8 +66,6 @@ const data = [
         </BarChart>
       </ResponsiveContainer>
       </div>
-
-    );
-  };
-  
-  export default WaterMeterGraph;
+    )
+}
+export default AirGraph;

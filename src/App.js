@@ -2,23 +2,31 @@ import React from "react";
 import { Provider } from "react-redux";
 import Store from "./Components/Utills/store";
 import { ThemeProvider } from "./Components/Utills/Themeconatext";
-import { createBrowserRouter, Outlet, Route, Link } from "react-router-dom";
-import Login from "./Components/Login";
-import SignUp from "./Components/SignUp";
-import Body from "./Components/Body";
-import Searchdashboard from "./Components/Searchdashboard";
-import ZoneDashboard from "./Components/ZoneDashboard";
-import SensorLogsDashboard from "./Components/sensorLogsDashbord";
-import EditProfile from "./Components/EditProfile";
-import AddSensor from "./Components/AddSensor";
-import AddCamera from "./AddCamera";
-import WrongParking from "./Components/WrongParking";
-import CrowdAlert from "./Components/CrowdAlert";
-import AddZone from "./AddZone";
-import AirAlerts from "./pages/AirAlerts";
-import WaterMeter from "./Components/Logs/WaterMeter";
+import { createBrowserRouter, Outlet } from "react-router-dom";
+
+import Login from "./Components/LogingPage/Login";
+import SignUp from "./Components/LogingPage/SignUp";
+import Body from "./Components/DashBord/Body";
+import Searchdashboard from "./Components/SearchPage/Searchdashboard";
+import ZoneDashboard from "./Components/ZonePage/ZoneDashBord";
+import SensorLogsDashboard from "./Components/DashBord/sensorLogsDashbord";
+import EditProfile from "./Components/ProfilePage/EditProfile";
+import AddSensor from "./Components/ProfilePage/AddSensor";
+import AddCamera from "./Components/ProfilePage/AddCamera";
+import WrongParking from "./Components/AlertPage/CrowdAlert/WrongParking/WrongParking";
+import CrowdAlert from "./Components/AlertPage/CrowdAlert/CrowdAlert";
+import AddZone from "./Components/ProfilePage/AddZone";
+import AirAlerts from "./Components/AlertPage/AirQuality/AirAlerts";
 import './App.css'
-import LiveVideo from "./pages/LiveVideo";
+import LiveVideo from "./Components/Live/LiveVideo";
+import AirQuality from "./Components/Logs/AirQuality";
+import WaterMeter from "./Components/Logs/WaterMeter";
+import LevelMeter from "./Components/Logs/LevelMeter";
+import EnergyMeter from "./Components/Logs/EnergyMeter";
+import FireDashBord from "./Components/AlertPage/CrowdAlert/Fire/FireDashBord";
+import WaterQuality from "./Components/AlertPage/WaterQuality/WaterQuality";
+import Error from "./Components/Utills/Error";
+
 function App() {
   return (
     <Provider store={Store}>
@@ -36,6 +44,7 @@ const routes = [
   {
     path: "/",
     element: <App />,
+    errorElement:<Error/>,
     children: [
       {
         path: "",
@@ -50,6 +59,7 @@ const routes = [
         path: '/MainDashboard',
         element: <Body />,
       },
+   
       {
         path: "/Searchdashboard",
         element: <Searchdashboard />,
@@ -99,6 +109,26 @@ const routes = [
       {
         path: "/WaterMeter",
         element: <WaterMeter />,
+      },
+      {
+        path: "/AirQuality",
+        element: <AirQuality />,
+      },
+      {
+        path: "/EnergyMeter",
+        element: <EnergyMeter />,
+      },
+      {
+        path: "/LevelMeter",
+        element: <LevelMeter />,
+      },
+      {
+        path: "/FireDashBord",
+        element: <FireDashBord/>,
+      },
+      {
+        path: "/WaterQuality",
+        element: <WaterQuality/>,
       },
     ],
   },
