@@ -22,6 +22,7 @@ function LiveVideo() {
 
   const handleVideoSelect = (video) => {
     setSelectedVideo(video);
+    console.log(video)
   };
 
   const handleVideoUpload = async(video) => {

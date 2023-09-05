@@ -11,6 +11,7 @@ console.log(video);
   return (
     <div className="video-player">
       <h2>{video.title}</h2>
+      {console.log(`${video.url}`,"helooo")}
     
        <ReactPlayer url={video.url} controls={true} width="100%" height="auto" />
  

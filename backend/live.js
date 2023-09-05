@@ -6,7 +6,7 @@ const app = express();
 const cors = require('cors'); // Add this import for the CORS module
 const port = 3001; // Change this to your desired port
 const { storeFilePath } = require('./filePaths.js'); // Import the storeFilePath function
-
+const router = express.Router();
 // Set up storage for uploaded files
 
 const storage = multer.diskStorage({
@@ -19,14 +19,15 @@ const uploadsDirectory =  "C:\\Users\\KIIT\\Desktop\\video_processing\\uploads"
 const upload = multer({ storage });
 
 // Serve uploaded files from the 'uploads' directory
-app.use(cors());
+
+// app.use(cors());
 // app.use('/uploads', express.static(path.join(__dirname, 'uploads')));
 
-app.use('/uploads', express.static("C:\\Users\\KIIT\\Desktop\\video_processing\\uploads"));
+router.use('/uploads', express.static("C:\\Users\\KIIT\\Desktop\\video_processing\\uploads"));
 
 
 // Handle file upload
-app.post('/backend/upload', upload.single('file'), (req, res) => {
+router.post('/backend/upload', upload.single('file'), (req, res) => {
   const selectedCategory = req.body.category;
     console.log('File received:', req.file);
   if (!req.file) {
@@ -52,7 +53,7 @@ app.post('/backend/upload', upload.single('file'), (req, res) => {
 });
 
 // Define a route to retrieve the list of videos
-app.get('/backend/videos', (req, res) => {
+router.get('/backend/videos', (req, res) => {
   fs.readdir(uploadsDirectory, (err, files) => {
     if (err) {
       console.error('Error reading uploads directory:', err);
@@ -67,11 +68,10 @@ app.get('/backend/videos', (req, res) => {
         thumbnailUrl: `/uploads/${file}`, // Replace with actual thumbnail URL
       };
     });
-    console.log("video is running")
+    // console.log("video is running")
     res.json(videos);
   });
 });
 
-app.listen(port, () => {
-  console.log(`Server is running on port ${port}`);
-});
+
+module.exports=router;
